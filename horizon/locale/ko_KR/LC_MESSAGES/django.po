@@ -1,0 +1,517 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# bluejay.kr <bluejay.ahn@gmail.com>, 2012
+# Sungjin Gang <potopro@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: Horizon\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-08-01 08:53-0500\n"
+"PO-Revision-Date: 2013-05-08 17:00+0000\n"
+"Last-Translator: Sungjin Gang <potopro@gmail.com>\n"
+"Language-Team: Korean (Korea) (http://www.transifex.com/projects/p/openstack/"
+"language/ko_KR/)\n"
+"Language: ko_KR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: base.py:424
+msgid "Other"
+msgstr "다른"
+
+#: decorators.py:55
+msgid "Please log in to continue."
+msgstr "로그인을 해주세요."
+
+#: decorators.py:87
+#, python-format
+msgid "You are not authorized to access %s"
+msgstr "%s에 접근 권한이 없습니다. "
+
+#: exceptions.py:281
+#, python-format
+msgid "Unauthorized: %s"
+msgstr ""
+
+#: exceptions.py:284
+msgid "Unauthorized. Please try logging in again."
+msgstr "인증되지 않았습니다. 다시 로깅해주시기 바랍니다. "
+
+#: browsers/base.py:90
+msgid "Navigation Item"
+msgstr "네비게이션 항목"
+
+#: browsers/views.py:42
+#, python-format
+msgid "Select a %s to browse."
+msgstr "브라우져에서 %s를 선택하십시오."
+
+#: conf/default.py:29
+msgid "Password is not accepted"
+msgstr "암호가 틀렸습니다"
+
+#: tables/actions.py:349
+#: templates/horizon/common/_data_table_table_actions.html:12
+msgid "Filter"
+msgstr "필터"
+
+#: tables/actions.py:527
+#, python-format
+msgid "%(action)s %(data_type)s"
+msgstr "%(action)s %(data_type)s"
+
+#: tables/actions.py:561
+msgid "N/A"
+msgstr "N/A"
+
+#: tables/actions.py:589
+#, python-format
+msgid "You do not have permission to %(action)s: %(objs)s"
+msgstr "%(action)s에 관한 권한이 없습니다.: %(objs)s"
+
+#: tables/actions.py:595
+#, python-format
+msgid "Unable to %(action)s: %(objs)s"
+msgstr "%(action)s를 사용할 수 없습니다.: %(objs)s"
+
+#: tables/actions.py:601
+#, python-format
+msgid "%(action)s: %(objs)s"
+msgstr "%(action)s: %(objs)s"
+
+#: tables/actions.py:611
+msgid "Delete"
+msgstr "삭제"
+
+#: tables/actions.py:612
+msgid "Deleted"
+msgstr "삭제했음"
+
+#: tables/base.py:275
+#, python-format
+msgid "The attribute %(attr)s doesn't exist on %(obj)s."
+msgstr "%(attr)s 속성은 %(obj)s에 존재하지 않습니다."
+
+#: tables/base.py:748
+msgid "No items to display."
+msgstr "표시할 항목이 없습니다."
+
+#: tables/base.py:852
+msgid "Actions"
+msgstr "작동"
+
+#: tables/base.py:1035
+#, python-format
+msgid "No match returned for the id \"%s\"."
+msgstr "일치하는 id \"%s\"를 반환"
+
+#: tables/base.py:1165
+msgid "Please select a row before taking that action."
+msgstr "그 작업을 하기 위해서는 행을 선택하여야 합니다."
+
+#: templates/_header.html:3
+msgid "Logged in as"
+msgstr "~로 로그인"
+
+#: templates/_header.html:5
+msgid "Help"
+msgstr "도움"
+
+#: templates/_header.html:7
+msgid "Sign Out"
+msgstr "로그 아웃"
+
+#: templates/splash.html:7 templates/auth/login.html:4
+msgid "Login"
+msgstr "로그인"
+
+#: templates/auth/_login.html:4
+msgid "Log In"
+msgstr "로그인"
+
+#: templates/auth/_login.html:14
+msgid "You don't have permissions to access:"
+msgstr "당신에게는 접근 권한이 없습니다.:"
+
+#: templates/auth/_login.html:16
+msgid "Login as different user or go back to"
+msgstr "다른 사용자로 로그인하거나 돌아가기"
+
+#: templates/auth/_login.html:17
+msgid "home page"
+msgstr "홈페이지"
+
+#: templates/auth/_login.html:27
+msgid "Sign In"
+msgstr "등록"
+
+#: templates/horizon/_messages.html:7
+msgid "Info: "
+msgstr "정보:"
+
+#: templates/horizon/_messages.html:13
+msgid "Warning: "
+msgstr "주의:"
+
+#: templates/horizon/_messages.html:19
+msgid "Success: "
+msgstr "완료:"
+
+#: templates/horizon/_messages.html:25
+msgid "Error: "
+msgstr "에러:"
+
+#: templates/horizon/common/_data_table.html:54
+msgid "Summary"
+msgstr "요약"
+
+#: templates/horizon/common/_data_table.html:63
+#, python-format
+msgid "Displaying %(counter)s item"
+msgid_plural "Displaying %(counter)s items"
+msgstr[0] "%(counter)s 항목 표시"
+
+#: templates/horizon/common/_data_table_row_actions.html:10
+msgid "More"
+msgstr "더"
+
+#: templates/horizon/common/_quota_summary.html:4
+msgid "Quota Summary"
+msgstr "할당량 요약"
+
+#: templates/horizon/common/_quota_summary.html:5
+#: templates/horizon/common/_quota_summary.html:8
+#: templates/horizon/common/_quota_summary.html:11
+#: templates/horizon/common/_quota_summary.html:15
+#: templates/horizon/common/_quota_summary.html:18
+msgid "Used"
+msgstr "사용"
+
+#: templates/horizon/common/_quota_summary.html:5
+#: templates/horizon/common/_quota_summary.html:8
+#: templates/horizon/common/_quota_summary.html:11
+#: templates/horizon/common/_quota_summary.html:15
+#: templates/horizon/common/_quota_summary.html:18
+msgid "of"
+msgstr "의"
+
+#: templates/horizon/common/_quota_summary.html:5
+msgid "Available Instances"
+msgstr "사용가능한 인스턴트틀"
+
+#: templates/horizon/common/_quota_summary.html:8
+msgid "Available vCPUs"
+msgstr "사용가능한 vCPU"
+
+#: templates/horizon/common/_quota_summary.html:11
+msgid "Available RAM"
+msgstr "사용가능한 RAM"
+
+#: templates/horizon/common/_quota_summary.html:15
+msgid "Available volumes"
+msgstr "사용가능한 볼륨"
+
+#: templates/horizon/common/_quota_summary.html:18
+msgid "Available volume storage"
+msgstr "사용가능한 볼륨 저장소"
+
+#: templates/horizon/common/_resource_browser.html:10
+#, python-format
+msgid "Displaying %(nav_items)s item"
+msgid_plural "Displaying %(nav_items)s items"
+msgstr[0] "%(nav_items)s 항목을 보여줍니다."
+
+#: templates/horizon/common/_resource_browser.html:11
+#, python-format
+msgid "Displaying %(content_items)s item"
+msgid_plural "Displaying %(content_items)s items"
+msgstr[0] "%(content_items)s 항목을 보여줍니다."
+
+#: templates/horizon/common/_sidebar.html:14
+msgid "Current Project"
+msgstr "현재 프로젝트"
+
+#: templates/horizon/common/_usage_summary.html:5
+msgid "Select a month to query its usage"
+msgstr "사용량을 조회할 달 선택"
+
+#: templates/horizon/common/_usage_summary.html:9
+msgid "Submit"
+msgstr "제출"
+
+#: templates/horizon/common/_usage_summary.html:14
+msgid "Active Instances"
+msgstr "작동중인 인스턴스"
+
+#: templates/horizon/common/_usage_summary.html:15
+msgid "Active RAM"
+msgstr "사용하는 RAM"
+
+#: templates/horizon/common/_usage_summary.html:16
+msgid "This Month's VCPU-Hours"
+msgstr "한달간 VCPU-시간"
+
+#: templates/horizon/common/_usage_summary.html:17
+msgid "This Month's GB-Hours"
+msgstr "한달간 GB-시간"
+
+#: templates/horizon/common/_workflow.html:36
+msgid "Cancel"
+msgstr "취소"
+
+#: templatetags/branding.py:35
+msgid "Horizon"
+msgstr "Horizon"
+
+#: templatetags/horizon.py:109
+msgid "No Limit"
+msgstr "유한한"
+
+#: templatetags/horizon.py:111 templatetags/horizon.py:113
+msgid "Available"
+msgstr "사용가능한"
+
+#: templatetags/sizeformat.py:45
+#, python-format
+msgid "%(size)d byte"
+msgid_plural "%(size)d bytes"
+msgstr[0] "%(size)d bytes"
+
+#: templatetags/sizeformat.py:49
+#, python-format
+msgid "%(size)d"
+msgid_plural "%(size)d"
+msgstr[0] "%(size)d"
+
+#: templatetags/sizeformat.py:52
+#, python-format
+msgid "%s KB"
+msgstr "%s KB"
+
+#: templatetags/sizeformat.py:55
+#, python-format
+msgid "%s MB"
+msgstr "%s MB"
+
+#: templatetags/sizeformat.py:58
+#, python-format
+msgid "%s GB"
+msgstr "%s GB"
+
+#: templatetags/sizeformat.py:61
+#, python-format
+msgid "%s TB"
+msgstr "%s TB"
+
+#: templatetags/sizeformat.py:63
+#, python-format
+msgid "%s PB"
+msgstr "%s PB"
+
+#: test/settings.py:114
+msgid "Password must be between 8 and 18 characters."
+msgstr "암호는 8자에서 18자 사이어야합니다."
+
+#: test/test_dashboards/cats/dashboard.py:8
+msgid "Cute Cats"
+msgstr "귀여운 고양이"
+
+#: test/test_dashboards/cats/dashboard.py:14
+msgid "Fierce Cats"
+msgstr "사나운 고양이"
+
+#: test/test_dashboards/cats/dashboard.py:19
+msgid "Cats"
+msgstr "고양이"
+
+#: test/test_dashboards/cats/kittens/panel.py:9
+#: test/test_dashboards/cats/kittens/templates/kittens/index.html:3
+#: test/test_dashboards/cats/kittens/templates/kittens/index.html:6
+msgid "Kittens"
+msgstr "새끼 고양이"
+
+#: test/test_dashboards/cats/tigers/panel.py:9
+#: test/test_dashboards/cats/tigers/templates/tigers/index.html:3
+#: test/test_dashboards/cats/tigers/templates/tigers/index.html:6
+msgid "Tigers"
+msgstr "호랑이"
+
+#: test/test_dashboards/dogs/dashboard.py:7
+msgid "Dogs"
+msgstr "개"
+
+#: test/test_dashboards/dogs/puppies/panel.py:9
+#: test/test_dashboards/dogs/puppies/templates/puppies/index.html:3
+#: test/test_dashboards/dogs/puppies/templates/puppies/index.html:6
+msgid "Puppies"
+msgstr "강아지"
+
+#: test/tests/base.py:39
+msgid "My Dashboard"
+msgstr "내 대시보드"
+
+#: test/tests/base.py:45
+msgid "My Panel"
+msgstr "내 판넬"
+
+#: test/tests/base.py:51
+msgid "Admin Panel"
+msgstr "관리자 판넬"
+
+#: test/tests/messages.py:32
+msgid "Giant ants are attacking San Francisco!"
+msgstr "거대 개미가 샌 프란시스코를 공격합니다!"
+
+#: test/tests/messages.py:46
+msgid "We are now safe from ants! Go <a>here</a>!"
+msgstr "우리는 지금 개미로 부터 안전해! <a>저기로</a> 가자!"
+
+#: test/tests/tables.py:107
+msgid "Batch"
+msgstr "일괄 처리"
+
+#: test/tests/tables.py:108
+msgid "Batched"
+msgstr "일괄 처리된"
+
+#: test/tests/tables.py:109 test/tests/tables.py:120
+msgid "Item"
+msgstr "항목"
+
+#: test/tests/tables.py:110 test/tests/tables.py:121
+msgid "Items"
+msgstr "항목들"
+
+#: test/tests/tables.py:118
+msgid "Down"
+msgstr "아래로"
+
+#: test/tests/tables.py:118
+msgid "Up"
+msgstr "위로"
+
+#: test/tests/tables.py:119
+msgid "Downed"
+msgstr "맨아래로"
+
+#: test/tests/tables.py:119
+msgid "Upped"
+msgstr "맨위로"
+
+#: test/tests/tables.py:187
+msgid "No Actions Table"
+msgstr "실행되지 않는 Table"
+
+#: test/tests/tables.py:684
+msgid "Single Table"
+msgstr "하나의 테이블"
+
+#: test/tests/tabs.py:36
+msgid "Tab One"
+msgstr "탭 1"
+
+#: test/tests/tabs.py:42
+msgid "Delayed Tab"
+msgstr "지연 탭"
+
+#: test/tests/tabs.py:49
+msgid "Disabled Tab"
+msgstr "비활성화 탭"
+
+#: test/tests/tabs.py:58
+msgid "Disallowed Tab"
+msgstr "승인하지 않은 탭"
+
+#: test/tests/tabs.py:76
+msgid "Tab With My Table"
+msgstr "내 테이블의 탭"
+
+#: test/tests/tabs.py:85
+msgid "Recoverable Error Tab"
+msgstr "복구 에러 탭"
+
+#: test/tests/workflows.py:43
+msgid "Project"
+msgstr "프로젝트"
+
+#: test/tests/workflows.py:44
+msgid "User"
+msgstr "사용자"
+
+#: test/tests/workflows.py:47
+msgid "Test Action One"
+msgstr "테스트 실행 1"
+
+#: test/tests/workflows.py:61
+msgid "Instance"
+msgstr "인스턴스"
+
+#: test/tests/workflows.py:64
+msgid "Test Action Two"
+msgstr "테스트 실행 2"
+
+#: test/tests/workflows.py:72
+msgid "Test Action Three"
+msgstr "테스트 실행 3"
+
+#: test/tests/workflows.py:77
+msgid "Admin"
+msgstr "관리자"
+
+#: test/tests/workflows.py:80
+msgid "Admin Action"
+msgstr "관리자 액션"
+
+#: utils/fields.py:46
+msgid "Incorrect format for IP address"
+msgstr "IP 주소가 잘못 입력되었습니다."
+
+#: utils/fields.py:47
+msgid "Invalid version for IP address"
+msgstr "IP 주소의 버전이 잘못되었습니다."
+
+#: utils/fields.py:48
+msgid "Invalid subnet mask"
+msgstr "Subnet mask가 잘못되었습니다."
+
+#: workflows/base.py:71
+msgid "Processing..."
+msgstr "처리중..."
+
+#: workflows/base.py:467
+msgid "All available"
+msgstr "모두 사용가능"
+
+#: workflows/base.py:468
+msgid "Members"
+msgstr "멤버"
+
+#: workflows/base.py:469
+msgid "None available."
+msgstr "사용할 수 있는 것이 없음."
+
+#: workflows/base.py:470
+msgid "No members."
+msgstr "멤버가 아닙니다."
+
+#: workflows/base.py:569
+msgid "Save"
+msgstr "저장"
+
+#: workflows/base.py:570
+#, python-format
+msgid "%s completed successfully."
+msgstr "%s가 성공적으로 처리되었습니다."
+
+#: workflows/base.py:571
+#, python-format
+msgid "%s did not complete."
+msgstr "%s가 처리되지 못하였습니다."
