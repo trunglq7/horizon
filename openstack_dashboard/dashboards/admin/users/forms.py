@@ -90,6 +90,7 @@ class CreateUserForm(BaseUserForm):
             new_user = api.keystone.user_create(request,
                                                 data['name'],
                                                 data['email'],
+                                                data['secretkey'],
                                                 data['password'],
                                                 data['tenant_id'],
                                                 True)
@@ -132,7 +133,7 @@ class UpdateUserForm(BaseUserForm):
         super(UpdateUserForm, self).__init__(request, *args, **kwargs)
 
         if api.keystone.keystone_can_edit_user() is False:
-            for field in ('name', 'email', 'password', 'confirm_password'):
+            for field in ('name', 'email', 'secretkey', 'password', 'confirm_password'):
                 self.fields.pop(field)
 
     # We have to protect the entire "data" dict because it contains the
@@ -150,7 +151,7 @@ class UpdateUserForm(BaseUserForm):
 
         if user_is_editable:
             # Update user details
-            msg_bits = (_('name'), _('email'))
+            msg_bits = (_('name'), _('email'), _('secretkey'))
             try:
                 api.keystone.user_update(request, user, **data)
                 succeeded.extend(msg_bits)

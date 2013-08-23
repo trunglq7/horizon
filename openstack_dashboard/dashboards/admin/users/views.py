@@ -81,7 +81,8 @@ class UpdateView(forms.ModalFormView):
         return {'id': user.id,
                 'name': user.name,
                 'tenant_id': getattr(user, 'tenantId', None),
-                'email': user.email}
+                'email': user.email,
+                'secretkey': user.secretkey}
 
 
 class CreateView(forms.ModalFormView):
