@@ -28,11 +28,24 @@ from horizon import exceptions
 from horizon import forms
 from horizon import messages
 from horizon.utils import validators
-
 from openstack_dashboard import api
+import base64
+import hashlib
+import hmac
+import six
 
 
 LOG = logging.getLogger(__name__)
+
+def checksecretkey(secretkey):
+    if isinstance(secretkey, six.string_types):
+        # It is unicode, convert it to bytes
+        secretkey = secretkey.encode('utf-8')
+    try:
+        key = base64.b32decode(secretkey, casefold=True)
+        return True
+    except (TypeError):
+        return False
 
 
 class BaseUserForm(forms.SelfHandlingForm):
@@ -52,6 +65,11 @@ class BaseUserForm(forms.SelfHandlingForm):
         if 'password' in data:
             if data['password'] != data.get('confirm_password', None):
                 raise ValidationError(_('Passwords do not match.'))
+#trunglq add
+        if 'secretkey' in data:
+            if checksecretkey(data['secretkey'])==False:
+                raise ValidationError(_('Secret key is invalid, it must be 16 characters, included 1->7, a->f, A->F'))
+#end
         return data
 
 
@@ -61,7 +79,7 @@ ADD_PROJECT_URL = "horizon:admin:projects:create"
 class CreateUserForm(BaseUserForm):
     name = forms.CharField(label=_("User Name"))
     email = forms.EmailField(label=_("Email"))
-    secretkey = forms.CharField(label=_("Secret Key"))
+    secretkey = forms.CharField(label=_("Secret Key"), required=False)
     password = forms.RegexField(
             label=_("Password"),
             widget=forms.PasswordInput(render_value=False),
@@ -87,7 +105,7 @@ class CreateUserForm(BaseUserForm):
     def handle(self, request, data):
         try:
             LOG.info('Creating user with name "%s"' % data['name'])
-            new_user = api.keystone.user_create(request,
+            new_user = api.keystone.user_create_with_otp(request,
                                                 data['name'],
                                                 data['email'],
                                                 data['secretkey'],
@@ -116,7 +134,7 @@ class UpdateUserForm(BaseUserForm):
     id = forms.CharField(label=_("ID"), widget=forms.HiddenInput)
     name = forms.CharField(label=_("User Name"))
     email = forms.EmailField(label=_("Email"))
-    secretkey = forms.CharField(label=_("Secret Key"))
+    secretkey = forms.CharField(label=_("Secret Key"),required=False)
     password = forms.RegexField(label=_("Password"),
             widget=forms.PasswordInput(render_value=False),
             regex=validators.password_validator(),

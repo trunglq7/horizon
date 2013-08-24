@@ -75,15 +75,22 @@ class UpdateView(forms.ModalFormView):
         context = super(UpdateView, self).get_context_data(**kwargs)
         context['user'] = self.get_object()
         return context
-
+#trunglq add
     def get_initial(self):
         user = self.get_object()
-        return {'id': user.id,
+        try:
+            print user.secretkey
+            return {'id': user.id,
                 'name': user.name,
                 'tenant_id': getattr(user, 'tenantId', None),
                 'email': user.email,
                 'secretkey': user.secretkey}
-
+        except Exception as err:
+            return {'id': user.id,
+                'name': user.name,
+                'tenant_id': getattr(user, 'tenantId', None),
+                'email': user.email}
+#end
 
 class CreateView(forms.ModalFormView):
     form_class = CreateUserForm

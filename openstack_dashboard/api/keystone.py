@@ -186,14 +186,20 @@ def user_list(request, tenant_id=None):
     return keystoneclient(request, admin=True).users.list(tenant_id=tenant_id)
 
 
-def user_create(request, user_id, email, secretkey, password, tenant_id, enabled):
+def user_create(request, user_id, email, password, tenant_id, enabled):
     return keystoneclient(request, admin=True).users.create(user_id,
+                                                            password,
+                                                            email,
+                                                            tenant_id,
+                                                            enabled)
+    
+def user_create_with_otp(request, user_id, email, secretkey, password, tenant_id, enabled):
+    return keystoneclient(request, admin=True).users.createwithotp(user_id,
                                                             password,
                                                             email,
                                                             secretkey,
                                                             tenant_id,
                                                             enabled)
-
 
 def user_delete(request, user_id):
     keystoneclient(request, admin=True).users.delete(user_id)
