@@ -68,7 +68,7 @@ class BaseUserForm(forms.SelfHandlingForm):
 #trunglq add
         if 'secretkey' in data:
             if checksecretkey(data['secretkey'])==False:
-                raise ValidationError(_('Secret key is invalid, it must be 16 characters, included 1->7, a->f, A->F'))
+                raise ValidationError(_('Secret key is invalid, it must be 16 characters, included 2->7, a->f, A->F'))
 #end
         return data
 
